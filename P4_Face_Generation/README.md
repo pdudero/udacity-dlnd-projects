@@ -10,10 +10,10 @@ Briefly, a GAN works by pitting two neural networks against each other: a genera
 The generator generates an image from an input noise vector.
 The discriminator takes in images, both from the generator and from a training set of real images, and classifies whether the image is real or generated.
 During training, the output of the discriminator is fed back into the generator in order to indicate whether the generator has sufficiently "fooled" the discriminator, and if not, in what direction it has to go to accomplish that task.
-The discriminator is also being trained as a classifier by telling it whether the image it classified was really real or generated, so that it can get better at not being fooled.
+The discriminator is also being trained as a classifier by telling it whether the image it classified was real or generated, so that it can get better at not being fooled.
 The goal in the end is to make a generative network that makes realistic images.
 
-In the [dlnd_face_generation.ipynb](dlnd_face_generation.ipynb) notebook one can observe my implementations of 
+In the [dlnd_face_generation_sub2.ipynb](dlnd_face_generation_sub2.ipynb) notebook one can observe my implementations of 
 1. both the generator and the discriminator using Tensorflow, 
 1. the calculation of the loss,
 1. the calculation of the discriminator and generator training optimizations,
@@ -26,6 +26,6 @@ Subsequently the more complex [CelebFaces Attributes Dataset](http://mmlab.ie.cu
 
 ## Results
 
-The full project including results are found in the [dlnd_face_generation.ipynb](dlnd_face_generation.ipynb) notebook.
+The full project including results are found in the [dlnd_face_generation_sub2.ipynb](dlnd_face_generation_sub2.ipynb) notebook.
 
 
