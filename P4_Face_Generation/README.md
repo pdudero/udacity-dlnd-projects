@@ -21,11 +21,14 @@ In the [dlnd_face_generation_sub2.ipynb](dlnd_face_generation_sub2.ipynb) notebo
 1. the hyperparameter values.
 
 In this project the DCGAN is first trained using the easier MNIST dataset of white handwritten digits on a black background.
-Subsequently the more complex [CelebFaces Attributes Dataset](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html) of celebrity faces in color is used.
+Subsequently the more complex [CelebFaces Attributes Dataset](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html), containing color pictures of celebrity faces, is used.
 
 
 ## Results
 
 The full project including results are found in the [dlnd_face_generation_sub2.ipynb](dlnd_face_generation_sub2.ipynb) notebook.
 
+Below is a comparison of a sample of real faces (left) and the last sample from the training of generated faces (right).
 
+![realfaces.png](realfaces.png)
+![lastgenfaces.png](lastgenfaces.png)
