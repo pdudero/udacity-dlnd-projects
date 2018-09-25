@@ -28,7 +28,7 @@ Subsequently the more complex [CelebFaces Attributes Dataset](http://mmlab.ie.cu
 
 The full project including results are found in the [dlnd_face_generation_sub2.ipynb](dlnd_face_generation_sub2.ipynb) notebook.
 
-Below is a comparison of a sample of real faces (left) and the last sample from the training of generated faces (right).
+Below is a comparison of a sample of real faces (left) and the last sample of generated faces from the training (right).
 
 ![realfaces.png](realfaces.png)
 ![lastgenfaces.png](lastgenfaces.png)
