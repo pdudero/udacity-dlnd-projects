@@ -16,6 +16,8 @@ In this project, the agent is software that controls the speed of a quadcopter's
 
 There are multiple RL algorithms depending on the agent design. Two different types of RL algorithms were explored in this project: Deep Q-Learning (DQL) and [Deep Deterministic Policy Gradients (DDPG)](https://arxiv.org/abs/1509.02971). The former discretizes the action space (possible actions are discrete and countable), whereas the latter allows for continuous action variables (e.g., continuous rotor speeds) and employs a so-called "actor-critic method".
 
+The table below describes the files associated with this project and their function.
+
 Notes | File | Usage
 -- |  --- | ---
 [1] | Quadcopter_Project_DDPG.ipynb | main notebook for the DDPG implementation, where the student implements the training and plotting functions
@@ -38,6 +40,8 @@ NA | agents | folder containing agent implementations. Each agent implements ini
 
 - [1] Implemented by the student using supplied sample/skeleton code
 - [2] Supplied
+
+The chief difficulty I encountered in this project was the extreme sensitivity of the simulated drone to unequal rotor speeds (even as low as 1 Hz difference), which caused the drone to flip over and crash. I spent days trying to solve this problem, but no amount of reward function or NN architecture tweaking would fix it. The network simply wouldn't learn to counter changes in angle. This having been my first encounter with the Actor-Critic method, which was my first attempted method, I became skeptical of this approach. Since I had seen a previous example of a real-time control system successfully solved with a deep Q-learning network, I chose to switch to that method by discretizing the rotor speeds into low, medium and high. Still the drone would flip over. Finally I had to reduce the action variables to a single discretized rotor speed control that all rotors were locked to. This solved the problem, but also restricted the drone to vertical motion exclusively. As a result the network was able to learn two different flight tasks: first, to take off, climb and reach a specified altitude, and second, to hover at an altitude. These tasks were separated due to their different reward functions.
 
 ## Results
 
