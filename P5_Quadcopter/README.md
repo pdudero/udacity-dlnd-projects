@@ -67,3 +67,7 @@ The following graphs show the successful completion of the hover task using the 
 Note that over the time period the rotors successfully toggle between low, medium and high values in order to maintain altitude to within about half of a meter or less.
 
 Plots for the DDPG implementation can be found in [this notebook](Quadcopter_Project_DDPG.ipynb)
+
+## Plans
+
+One possible avenue to pursue, in order to restore a modicum of horizontal motion, is to allow for brief periods of unequal rotor speeds, in order to provide an impulse in a particular direction, after which the rotors are relocked together.
