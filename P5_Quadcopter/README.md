@@ -16,7 +16,7 @@ In this project, the agent is software that controls the speed of a quadcopter's
 
 There are multiple RL algorithms depending on the agent design. Most revolve around the use of either a _value function_, or a _policy_, or both. A value function determines the value of each possible state based on the expected cumulative reward (since that is what we're maximizing) to be gained by going to that state. A policy is a set of rules on what actions to take given the current state and inputs from the environment. Policy methods aim at optimizing the existing policy as various states and rewards are encountered, without pre-calculating a value function.
 
-Two different types of RL algorithms were explored in this project: [Deep Q-Learning (DQL)](https://en.wikipedia.org/wiki/Q-learning) and [Deep Deterministic Policy Gradients (DDPG)](https://arxiv.org/abs/1509.02971). The former is a policy-based method that discretizes the action space (possible actions are discrete and countable), whereas the latter allows for continuous action variables (e.g., continuous rotor speeds) and uses both a value function and a policy, the so-called "actor-critic method".
+Two different types of RL algorithms were explored in this project: [Deep Q-Learning (DQL)](https://en.wikipedia.org/wiki/Q-learning) and [Deep Deterministic Policy Gradients (DDPG)](https://arxiv.org/abs/1509.02971). The former is a policy-based method that discretizes the action space (possible actions are discrete and countable), whereas the latter allows for continuous action variables (e.g., continuous rotor speeds) and uses both a value function and a policy, the so-called "actor-critic method". The DDPG method used Keras to build and train the networks, whereas the DQL method used Tensorflow.
 
 The table below describes the files associated with this project and their function.
 
@@ -33,12 +33,12 @@ Notes | File | Usage
 NA | [agents](agents) | folder containing agent implementations. Each agent implements init, reset, act, step, and learn functions
 [1] | [agents/DDPGagent.py](agents/DDPGagent.py) | implementation of the agent in the DDPG method 
 [1] | [agents/DQLagent.py](agents/DQLagent.py) | implementation of the agent in the DQL method 
-[1] | [agents/DQLnetwork.py](agents/DQLnetwork.py) | implementation of the neural network for the DQLagent using Keras
+[1] | [agents/DQLnetwork.py](agents/DQLnetwork.py) | implementation of the neural network for the DQLagent
 [2] | [agents/OUNoise.py](agents/OUNoise.py) | implementation of Ornstein-Uhlenbeck noise for the DDPG method 
-[1] | [agents/actor_orig.py](agents/actor_orig.py) | implementation of the actor NN in the DDPG method with 32x64x32 hidden layers using Keras
-[1] | [agents/actor_128x256x128.py](agents/actor_128x256x128.py) | implementation of the actor NN in the DDPG method with 128x256x128 hidden layers using Keras
-[1] | [agents/critic_orig.py](agents/critic_orig.py) | implementation of the critic dual NNs in the DDPG method with 32x64 hidden layers using Keras
-[1] | [agents/critic_128x256.py](agents/critic_128x256.py) | implementation of the critic dual NNs in the DDPG method with 128x256 hidden layers using Keras
+[1] | [agents/actor_orig.py](agents/actor_orig.py) | implementation of the actor NN in the DDPG method with 32x64x32 hidden layers
+[1] | [agents/actor_128x256x128.py](agents/actor_128x256x128.py) | implementation of the actor NN in the DDPG method with 128x256x128 hidden layers
+[1] | [agents/critic_orig.py](agents/critic_orig.py) | implementation of the critic dual NNs in the DDPG method with 32x64 hidden layers
+[1] | [agents/critic_128x256.py](agents/critic_128x256.py) | implementation of the critic dual NNs in the DDPG method with 128x256 hidden layers
 [2] | [agents/replaybuffer.py](agents/replaybuffer.py) | used for batch training in both methods
 
 - [1] Implemented by the student using supplied sample/skeleton code
