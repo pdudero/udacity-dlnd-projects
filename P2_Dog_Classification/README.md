@@ -16,3 +16,5 @@ The project runs through the following steps:
 
 Below are two pictures, one of a celebrity, and another of a dog, and the output of the network in terms of what dog breed is resembled in those pictures.
 
+![images/dogclass1.png](images/dogclass1.png)
+![images/faceclass1.png](images/faceclass1.png)
