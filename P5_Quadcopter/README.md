@@ -52,3 +52,16 @@ A more detailed description of my experiences and design decisions can be found 
 
 ## Results
 
+The following graphs show the successful completion of the takeoff-reach altitude task using the DQL implementation. Each colored line represents a separate training episode. Five such episodes near the end of training were selected for plotting.
+
+![images/takeoff_graphs.png](images/takeoff_graphs.png)
+
+Note that over six seconds of simulation the dz vs t graph shows the drone taking off, climbing and finally reaching the target altitude, which marks 0 on the graph, and is 10 meters above the ground where it started. Note also that the thrustz and rotor speeds toggle between three values, and that for most of the first second the thrustz is on average higher than for the rest of the period, since it is taking off, and the dz and vz plots show the drone accelerating upward.
+
+The following graphs show the successful completion of the hover task using the DQL implementation. The drone starts at altitude and is tasked with remaining at altitude, this time for five seconds. Once again five episode are taken from near the end of the training.
+
+![images/hover_graphs.png](images/hover_graphs.png)
+
+Note that over the time period the rotors successfully toggle between low, medium and high values in order to maintain altitude to within about half of a meter or less.
+
+Plots for the DDPG implementation can be found in [this notebook](Quadcopter_Project_DDPG.ipynb)
